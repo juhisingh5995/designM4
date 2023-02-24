@@ -1,0 +1,52 @@
+.contact-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #ffffff;
+  .contact-text {
+    h3 {
+      color: #454545;
+      line-height: 1.5;
+      font-size: 22px;
+      font-weight: 400;
+      padding-bottom: 48px;
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        text-align: left;
+        font-size: 28px;
+      }
+    }
+    .contact_mail {
+      h4 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 1.1;
+        position: relative;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+          text-align: left;
+          font-size: 66px;
+        }
+        &:before {
+          content: "";
+          bottom: -4px;
+          left: 0;
+          position: absolute;
+          background: red;
+          height: 2px;
+          width: 0%;
+          transition: all 0.3s;
+          display: none;
+          @media screen and (min-width: 768px) {
+            display: block;
+          }
+        }
+        &:hover {
+          color: red;
+        }
+        &:hover::before {
+          width: calc(100% - 44%);
+        }
+      }
+    }
+  }
+}

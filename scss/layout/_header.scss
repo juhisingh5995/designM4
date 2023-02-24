@@ -1,0 +1,187 @@
+header {
+    background-color: $color-white;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 20px;
+        position: fixed;
+        max-height: 94px;
+        z-index: 1;
+        width: 100%;
+        box-shadow: 0 0.25rem 1rem rgba($color: #000000, $alpha: 0.08);
+
+    }
+.nav{
+    padding: 24px 0 75px 0;
+
+    .mobile-nav {
+        display: block;
+
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
+
+        .mobile-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 20px;
+
+            .mobile-logo {
+                h1 {
+                    font-size: 22px;
+                    font-weight: 700;
+                    min-height: 70px;
+                    
+        @media screen and (min-width: 768px) {
+            font-size: 28px;
+        }
+                }
+            }
+
+            .mobile-link {
+                display: flex;
+                border-bottom: 2px solid #fafafa;
+                height: 30px;
+                align-items: center;
+
+                .hamburger {
+                    display: block;
+
+                    .line {
+                        width: 30px;
+                        height: 2px;
+                        margin: 5px 0;
+                        background: $color-black;
+                    }
+
+                    &.active {
+                        .line:nth-child(2) {
+                            opacity: 0;
+                            display: none;
+                        }
+
+                        .line:nth-child(1) {
+                            transform: translateY(8px) rotate(45deg);
+                            margin: 14px 0;
+                        }
+
+                        .line:nth-child(3) {
+                            transform: translateY(-8px) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .mbl-link {
+
+            display: none;
+            padding-bottom: 96px;
+            &.mbl-list {
+                display: block;
+              
+
+
+            }
+
+            ul {
+                text-align: center;
+                height: 110px;
+                display: flex;
+                padding-top: 6px;
+                flex-direction: column;
+                font-size: 12px;
+                font-weight: 500;
+                &:hover{
+                    color:red;
+                }
+
+
+                li {
+                    list-style: none;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 400;
+                        font-size: 16px;
+                        margin: 10px 16px;
+                        text-decoration: none;
+                        line-height: 1.73;
+                        color: $color-black;
+                        &:hover{
+                            color:red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // desktop css
+    .desktop-nav {
+
+        display: none;
+
+        @media screen and (min-width: 1200px) {
+            display: block;
+
+        }
+
+        .desktop-link {
+            display: flex;
+            justify-content: space-between;
+            min-height: 70px;
+            align-items: baseline;
+            margin-right: 0;
+            padding: 0;
+            transition: all .3s;
+
+
+            .desktop-logo {
+                max-width: 42%;
+
+                h1 {
+                    font-weight: 700;
+                    white-space: normal;
+                    vertical-align: -4px;
+                    font-size: 28px;
+                    cursor: pointer;
+                    line-height: 1.5;
+                }
+            }
+
+            .menu-link {
+                max-width: 58%;
+
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    gap: 16px;
+    
+
+
+                    li {
+                        a {
+                            position: relative;
+                            font-weight: 400;
+                            font-size: 18px;
+                            text-decoration: none;
+                            line-height: 1.73;
+                            color: $color-black;
+                            margin-left: 30px;
+                            &:hover{
+                                color:red;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+}

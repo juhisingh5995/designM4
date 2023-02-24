@@ -1,0 +1,133 @@
+.feature3-section {
+    padding-bottom: 32px;
+    padding-top: 32px;
+
+    .feature3-row {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .feature3-design {
+            @media (min-width: 768px) {
+                width: 50%;
+
+                .feature3-wrapper {
+                    .feature3-img {
+                        img {
+                            height: 1000px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .feature3-creative {
+            @media (min-width: 768px) {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .feature3-creative-art {
+                .feature3-wrapper {
+                    .feature3-img {
+                        img {
+                            height: 500px;
+                        }
+                    }
+                }
+
+            }
+
+            .feature3-brand {
+                @media (min-width: 768px) {
+                    display: flex;
+
+                }
+
+                .feature3-brand-design {
+                    .feature3-wrapper {
+                        .feature3-img {
+                            img {
+                                height: 500px;
+                            }
+                        }
+                    }
+                }
+
+                .feature3-brand-art {
+                    .feature3-wrapper {
+                        .feature3-img {
+                            img {
+                                height: 500px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .img-wrapper3 {
+        overflow: hidden;
+        margin-top: -4px;
+        position: relative;
+
+        &:hover {
+            .card-text {
+                opacity: 1;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .card-text {
+            position: absolute;
+            opacity: 0;
+            top: 40%;
+            left: 33%;
+
+            @media screen and (min-width: 768px) {
+                left: 30%;
+                top: 50%;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 1.5;
+                color: #fff;
+                text-align: center;
+                font-weight: 400;
+                padding-bottom: 4px;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                }
+            }
+
+            h1 {
+                transition: all 0.3s;
+                font-size: 24px;
+                color: #fff;
+                line-height: 1.5;
+                text-align: center;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
